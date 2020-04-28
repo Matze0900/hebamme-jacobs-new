@@ -24,7 +24,7 @@ app.post('/email', (req, res) => {
     sendEmail(req.body);
 });
 
-app.listen(PORT, () => log(__dirname), 3000);
+app.listen(process.env.PORT || PORT, () => log(__dirname), process.env.PORT || PORT);
 
 let sendEmail = function(data) {
     var transp = mail.createTransport({
