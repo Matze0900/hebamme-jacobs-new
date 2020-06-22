@@ -1,0 +1,135 @@
+        .card-application {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .card-application .card-wrapper {
+            /* adds 3d effect to the card */
+            perspective: 7000px;
+            width: 100%;
+        }
+        
+        .card-application .card-wrapper:hover .card {
+            transform: rotate3d(0, 1, 0, 180deg);
+        }
+        
+        .card-application .card {
+            width: 100%;
+            transform-style: preserve-3d;
+            transform: translateZ(-50px);
+            transition: transform 0.9s;
+        }
+        
+        .card-application .card:before {
+            content: "";
+            display: block;
+            padding-bottom: 120%;
+        }
+        
+        .card-application .card:after {
+            content: "";
+            display: block;
+        }
+        
+        .card-application .card__face {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transform: rotate3d(1, 1, 1, 0deg);
+            backface-visibility: hidden;
+        }
+        
+        .card-application .card__face>h2 {
+            font-size: 40px;
+            margin-top: 40%;
+            margin-left: 10px;
+            margin-right: 10px;
+            padding: 10px;
+            /*stitching*/
+            outline: 1px dashed #9aaebda8;
+            outline-offset: -5px;
+            background-color: #fdfbee8f;
+        }
+        
+        .card-application .card__face--front {
+            background-image: url("img/baby-lying-on-fur-1648383_cropped.jpg");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .card-application .card__face--back {
+            background-size: 100% 100%;
+            background-image: url("img/baby-lying-on-fur-1648383_cropped_blured.jpg");
+            transform: rotate3d(0, 1, 0, 180deg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .backcard-text {
+            padding: 10% 10% 10% 10%;
+        }
+        /** media queries to adjust the font size **/
+        
+        @media (max-width: 500px) {
+            .card-application .card__face--back {
+                font-size: 4.8vw;
+                color: #200d0d;
+            }
+            h2 {
+                font-size: 14vw;
+            }
+        }
+        
+        @media (min-width: 500px) and (max-width: 992px) {
+            .card-application .card__face--back {
+                font-size: 1.4vw !important;
+                color: #200d0d;
+                font-weight: 400;
+            }
+            h2 {
+                font-size: 4vw !important;
+            }
+        }
+        
+        @media (min-width: 992px) and (max-width: 1024px) {
+            .card-application .card__face--back {
+                font-size: 1.5vw !important;
+                color: #200d0d;
+                width: 100%;
+            }
+            h2 {
+                font-size: 3vw !important;
+            }
+        }
+        
+        @media (min-width: 1025px) and (max-width: 1600px) {
+            .card-application .card__face--back {
+                font-size: 1.3vw;
+                color: #200d0d;
+                width: 100%;
+            }
+        }
+        
+        @media (min-width: 1601px) {
+            .card-application .card__face--back {
+                font-size: 1vw;
+                color: #200d0d;
+                width: 100%;
+            }
+            /*
+    .card-application .card__face--front {
+        background-image: url("img/baby-test-5.jpg") !important;
+    }
+    .card-application .card__face--back {
+        background-image: url("img/baby-test-5_blured.jpg") !important;
+    }
+    */
+        }

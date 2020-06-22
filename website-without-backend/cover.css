@@ -1,0 +1,326 @@
+/*
+ * Globals
+ */
+
+
+/* Links */
+
+a,
+a:focus,
+a:hover {
+    color: #fff;
+}
+
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('Dancing_Script/DancingScript-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto/Roboto-Regular.ttf');
+}
+
+.container-wrapper {
+    width: 100%;
+    align-self: center;
+    max-width: 1280px;
+    background-color: #fdfbeedc;
+    /* background-color: rgba(250, 215, 215, 0.274) */
+    /* background-color: #fad7d781; */
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    color: #a06d6c !important;
+}
+
+.logo {
+    z-index: 100;
+}
+
+.navbar>.container {
+    width: auto;
+}
+
+.navbar {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    max-width: 1280px;
+    background-color: white !important;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-link {
+    color: #A35F5E !important;
+}
+
+.navbar-nav {
+    justify-content: center !important;
+}
+
+a {
+    color: #A35F5E !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a>h3:hover {
+    border-bottom: 1px dashed #9aaebda8;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: #976a6a !important;
+    /*stitching*/
+    border-top: 1px dashed #9aaebda8;
+    border-bottom: 1px dashed #9aaebda8;
+    margin-top: -1px;
+}
+
+
+/** Custom Container and overall classes **/
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.row {
+    margin-left: 0% !important;
+    margin-right: 0% !important;
+}
+
+.centering {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-link {
+    background-color: transparent;
+    color: #A35F5E !important;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    border-bottom: 1px dashed #9aaebda8;
+    text-decoration: none;
+}
+
+.btn-link:focus {
+    text-decoration: none;
+}
+
+.section-distance {
+    margin-top: 80px;
+}
+
+
+/** landing section **/
+
+.landing-section {
+    padding-top: 100px;
+}
+
+.landing-section .row {
+    width: 100%;
+}
+
+.landing-section-text {
+    text-align: center;
+    margin: auto;
+}
+
+.landing-subtitle {
+    margin-top: 32px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.parallax-window {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    min-height: 400px;
+    min-width: 100%;
+    background: transparent;
+}
+
+
+/** about section **/
+
+.about-section {
+    margin-top: 64px;
+}
+
+.about-picture-container {
+    max-width: 400px;
+    width: 100%;
+}
+
+.about-picture-styling {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 50%;
+}
+
+.pregenant-what-now-text {
+    margin-bottom: 80px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+h1,
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 48px;
+    text-shadow: 4px 4px 4px #aaa;
+    color: #965354 !important;
+}
+
+
+/** card section **/
+
+.card-distance {
+    padding-top: 10px;
+}
+
+
+/** faq-section **/
+
+#accordion {
+    width: 100%;
+}
+
+#faq {
+    margin-top: 64px;
+    text-align: left;
+}
+
+.card-header {
+    background-color: #fdfbee8f;
+}
+
+#faq button {
+    text-align: left;
+}
+
+
+/** contact section **/
+
+.distance-to-contact {
+    margin-bottom: 40px;
+}
+
+.contact-picture {
+    border-radius: 50%;
+    max-width: 250px;
+    min-width: 150px;
+    margin-bottom: 24px;
+}
+
+.btn {
+    white-space: normal;
+}
+
+#contact {
+    overflow: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#contact #form h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+}
+
+#contact #form input {
+    width: 255px;
+    border: 0px;
+    color: #000000;
+    padding: 10px 10px 10px 30px;
+    font: 11px/20px'Open Sans', Verdana, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+
+#contact #form textarea {
+    border: 0px;
+    width: 255px;
+    height: 140px;
+    padding: 10px 10px 10px 30px;
+    font: 11px/20px'Open Sans', Verdana, Helvetica, sans-serif;
+    resize: none;
+}
+
+#contact #form input.name {
+    background-color: #ffefa673;
+    background-image: url(img/icons/user.png);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: 2px 10px;
+}
+
+#contact #form input.email {
+    background-color: #ffefa673;
+    background-image: url(img/icons/email.png);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: 2px 10px;
+}
+
+#contact #form textarea.message {
+    background-color: #ffefa673;
+    background-image: url(img/icons/speech-bubble.png);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: 2px 10px;
+}
+
+#contact #form input.submit {
+    cursor: pointer;
+    width: 85px;
+    height: 30px;
+    padding: 0px 0px 5px 0px;
+    margin: 10px 16px 0px 0px;
+    background: #C08B88;
+    font: 14px/16px'Bree Serif', Georgia, serif;
+}
+
+ ::placeholder {
+    color: #965354;
+}
+
+.last-section {
+    padding-bottom: 100px;
+}
+
+.impressum-main-text {
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 20px;
+}
+
+.impressum-main-text h2 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
